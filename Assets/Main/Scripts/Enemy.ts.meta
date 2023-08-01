@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: f51d232c3cb28fa44bc7b86fde5c3ca5
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst UnityEngine_1 = require(\"UnityEngine\");\r\nconst
+    ZEPETO_Script_1 = require(\"ZEPETO.Script\");\r\nconst PoolManager_1 = require(\"./PoolManager\");\r\nclass
+    Enemy extends ZEPETO_Script_1.ZepetoScriptBehaviour {\r\n    OnTriggerEnter(collision)
+    {\r\n        UnityEngine_1.Object.Destroy(this.gameObject);\r\n        PoolManager_1.default.PlayParticle(this.gameObject.transform.position);\r\n       
+    PoolManager_1.default.PlaySound(this.gameObject.transform.position);\r\n       
+    console.log(\"Range Entered!\");\r\n    }\r\n}\r\nexports.default = Enemy;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiRW5lbXkuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJFbmVteS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLDZDQUFnRDtBQUNoRCxpREFBcUQ7QUFDckQsK0NBQXdDO0FBRXhDLE1BQXFCLEtBQU0sU0FBUSxxQ0FBcUI7SUFHcEQsY0FBYyxDQUFDLFNBQW9CO1FBRS9CLG9CQUFNLENBQUMsT0FBTyxDQUFDLElBQUksQ0FBQyxVQUFVLENBQUMsQ0FBQztRQUNoQyxxQkFBVyxDQUFDLFlBQVksQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQztRQUM3RCxxQkFBVyxDQUFDLFNBQVMsQ0FBQyxJQUFJLENBQUMsVUFBVSxDQUFDLFNBQVMsQ0FBQyxRQUFRLENBQUMsQ0FBQztRQUMxRCxPQUFPLENBQUMsR0FBRyxDQUFDLGdCQUFnQixDQUFDLENBQUM7SUFDbEMsQ0FBQztDQUVKO0FBWEQsd0JBV0MifQ==","assetPath":"Assets/Main/Scripts/Enemy.ts","manifest":{"properties":[],"name":"Enemy","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 134cabc5ec4b578fa42e5e8d679da300
+  onlyWriteTrigger: 0

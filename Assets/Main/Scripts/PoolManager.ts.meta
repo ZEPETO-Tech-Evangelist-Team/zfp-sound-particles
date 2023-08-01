@@ -1,0 +1,42 @@
+fileFormatVersion: 2
+guid: c4d15341f64ab094c8ec22f8ff36525e
+importerOverride: ZEPETO.Script.Compiler:ZEPETO.Script:TypescriptAssetImporter
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: -1123457745, guid: 54cf806323ffe4418a4ce4cc63fe6b9d, type: 3}
+  isAssemblyDeclarations: 0
+  assembly: 
+  generateAllTypes: 1
+  types: []
+  generateWrapper: 0
+  overrideWrapperTypes: 0
+  wrapperTypes: []
+  WrapperFilters: []
+  wrapperOutputDirectory: Generated
+  compiledResult: '{"source":"\"use strict\";\r\nObject.defineProperty(exports, \"__esModule\",
+    { value: true });\r\nconst PoolObject_1 = require(\"./PoolObject\");\r\nconst
+    UnityEngine_1 = require(\"UnityEngine\");\r\nclass PoolManager {\r\n    static
+    PlaySound(position) {\r\n        this.Init();\r\n        let currentPooled =
+    this.GetNext();\r\n        if (!currentPooled) {\r\n            return;\r\n       
+    }\r\n        currentPooled.PlaySound(position);\r\n    }\r\n    static PlayParticle(position)
+    {\r\n        this.Init();\r\n        let currentPooled = this.GetNext();\r\n       
+    if (!currentPooled) {\r\n            return;\r\n        }\r\n        currentPooled.PlayParticle(position);\r\n   
+    }\r\n    static GetNext() {\r\n        for (let i = 0; i < 5; i++) {\r\n           
+    if (this.poolObjects[i].ready == true) {\r\n                return this.poolObjects[i];\r\n           
+    }\r\n        }\r\n        ;\r\n        console.log(\"WARNING: Not enough pooled
+    objects...\");\r\n        return null;\r\n    }\r\n    static Init() {\r\n       
+    if (!PoolManager.init) {\r\n            this.poolObjects.push(UnityEngine_1.GameObject.Find(\"Pooling
+    #1\").GetComponent($typeof(PoolObject_1.default)));\r\n            this.poolObjects.push(UnityEngine_1.GameObject.Find(\"Pooling
+    #2\").GetComponent($typeof(PoolObject_1.default)));\r\n            this.poolObjects.push(UnityEngine_1.GameObject.Find(\"Pooling
+    #3\").GetComponent($typeof(PoolObject_1.default)));\r\n            this.poolObjects.push(UnityEngine_1.GameObject.Find(\"Pooling
+    #4\").GetComponent($typeof(PoolObject_1.default)));\r\n            this.poolObjects.push(UnityEngine_1.GameObject.Find(\"Pooling
+    #5\").GetComponent($typeof(PoolObject_1.default)));\r\n        }\r\n    }\r\n}\r\nexports.default
+    = PoolManager;\r\nPoolManager.poolObjects = [];\r\nPoolManager.init = false;\r\n//#
+    sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiUG9vbE1hbmFnZXIuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJQb29sTWFuYWdlci50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUNBLDZDQUFxQztBQUNyQyw2Q0FBa0Q7QUFFbEQsTUFBcUIsV0FBVztJQUs1QixNQUFNLENBQUMsU0FBUyxDQUFDLFFBQWlCO1FBRTlCLElBQUksQ0FBQyxJQUFJLEVBQUUsQ0FBQTtRQUNYLElBQUksYUFBYSxHQUFHLElBQUksQ0FBQyxPQUFPLEVBQUUsQ0FBQztRQUNuQyxJQUFHLENBQUMsYUFBYSxFQUNqQjtZQUNJLE9BQU87U0FDVjtRQUNELGFBQWEsQ0FBQyxTQUFTLENBQUMsUUFBUSxDQUFDLENBQUM7SUFDdEMsQ0FBQztJQUVELE1BQU0sQ0FBQyxZQUFZLENBQUMsUUFBaUI7UUFFakMsSUFBSSxDQUFDLElBQUksRUFBRSxDQUFBO1FBQ1gsSUFBSSxhQUFhLEdBQUcsSUFBSSxDQUFDLE9BQU8sRUFBRSxDQUFDO1FBQ25DLElBQUcsQ0FBQyxhQUFhLEVBQ2pCO1lBQ0ksT0FBTztTQUNWO1FBQ0QsYUFBYSxDQUFDLFlBQVksQ0FBQyxRQUFRLENBQUMsQ0FBQztJQUN6QyxDQUFDO0lBRUQsTUFBTSxDQUFDLE9BQU87UUFFVixLQUFJLElBQUksQ0FBQyxHQUFHLENBQUMsRUFBRSxDQUFDLEdBQUcsQ0FBQyxFQUFFLENBQUMsRUFBRSxFQUN6QjtZQUNJLElBQUcsSUFBSSxDQUFDLFdBQVcsQ0FBQyxDQUFDLENBQUMsQ0FBQyxLQUFLLElBQUksSUFBSSxFQUNwQztnQkFDSSxPQUFPLElBQUksQ0FBQyxXQUFXLENBQUMsQ0FBQyxDQUFDLENBQUM7YUFDOUI7U0FDSjtRQUFBLENBQUM7UUFFRixPQUFPLENBQUMsR0FBRyxDQUFDLHVDQUF1QyxDQUFDLENBQUM7UUFDckQsT0FBTyxJQUFJLENBQUM7SUFDaEIsQ0FBQztJQUVELE1BQU0sQ0FBQyxJQUFJO1FBRVAsSUFBRyxDQUFDLFdBQVcsQ0FBQyxJQUFJLEVBQ3BCO1lBQ0ksSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsd0JBQVUsQ0FBQyxJQUFJLENBQUMsWUFBWSxDQUFDLENBQUMsWUFBWSxTQUFDLG9CQUFVLEdBQUksQ0FBQztZQUNoRixJQUFJLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyx3QkFBVSxDQUFDLElBQUksQ0FBQyxZQUFZLENBQUMsQ0FBQyxZQUFZLFNBQUMsb0JBQVUsR0FBSSxDQUFDO1lBQ2hGLElBQUksQ0FBQyxXQUFXLENBQUMsSUFBSSxDQUFDLHdCQUFVLENBQUMsSUFBSSxDQUFDLFlBQVksQ0FBQyxDQUFDLFlBQVksU0FBQyxvQkFBVSxHQUFJLENBQUM7WUFDaEYsSUFBSSxDQUFDLFdBQVcsQ0FBQyxJQUFJLENBQUMsd0JBQVUsQ0FBQyxJQUFJLENBQUMsWUFBWSxDQUFDLENBQUMsWUFBWSxTQUFDLG9CQUFVLEdBQUksQ0FBQztZQUNoRixJQUFJLENBQUMsV0FBVyxDQUFDLElBQUksQ0FBQyx3QkFBVSxDQUFDLElBQUksQ0FBQyxZQUFZLENBQUMsQ0FBQyxZQUFZLFNBQUMsb0JBQVUsR0FBSSxDQUFDO1NBQ25GO0lBQ0wsQ0FBQzs7QUFuREwsOEJBc0RDO0FBcERpQix1QkFBVyxHQUFpQixFQUFFLENBQUM7QUFDL0IsZ0JBQUksR0FBYSxLQUFLLENBQUMifQ==","assetPath":"Assets/Main/Scripts/PoolManager.ts","manifest":{"properties":[],"name":"PoolManager","description":"","hasAnimatorMove":false},"isCompiled":true}'
+  typescriptHash: 471b114e7e5e36b8850620079cdd189b
+  onlyWriteTrigger: 0
